@@ -49,28 +49,28 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link " to="/contact">
-                  general
+                <Link className="nav-link " to="/general">
+                  General
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link " to="/contact">
-                  health
+                <Link className="nav-link " to="/health">
+                  Health
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link " to="/contact">
-                  science
+                <Link className="nav-link " to="/science">
+                  Science
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link " to="/contact">
-                  sports
+                <Link className="nav-link " to="/Sports">
+                  Sports
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link " to="/contact">
-                  technology
+                <Link className="nav-link " to="/technology">
+                  Technology
                 </Link>
               </li>
             </ul>
