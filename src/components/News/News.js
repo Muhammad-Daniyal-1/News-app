@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import Spinner from "../Spinner/Spinner";
 import NewsItem from "./NewsItem";
 
+
 export default class News extends Component {
+
   constructor() {
     super();
     this.state = {
@@ -13,7 +15,7 @@ export default class News extends Component {
   }
 
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=721c9b7b9ec14a5db5d1341d703816ce&page=1&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=721c9b7b9ec14a5db5d1341d703816ce&page=1&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
@@ -28,7 +30,7 @@ export default class News extends Component {
   handlePrevious = async () => {
     console.log("previous");
 
-    let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=721c9b7b9ec14a5db5d1341d703816ce&page=${
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=721c9b7b9ec14a5db5d1341d703816ce&page=${
       this.state.page - 1
     }&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
@@ -42,7 +44,7 @@ export default class News extends Component {
   };
 
   handleNext = async () => {
-    let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=721c9b7b9ec14a5db5d1341d703816ce&page=${
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=721c9b7b9ec14a5db5d1341d703816ce&page=${
       this.state.page + 1
     }&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
